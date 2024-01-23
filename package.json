@@ -1,0 +1,98 @@
+{
+  "name": "breezy-tw",
+  "version": "0.0.0",
+  "license": "MIT",
+  "type": "module",
+  "main": "./dist/breezy-tw.umd.js",
+  "module": "./dist/breezy-tw.es.js",
+  "types": "./dist/main.d.ts",
+  "files": [
+    "dist",
+    "*.md"
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/breezy-tw.es.js",
+      "require": "./dist/breezy-tw.umd.js",
+      "types": "./dist/main.d.ts"
+    },
+    "./lib/style.css": "./dist/style.css"
+  },
+  "scripts": {
+    "dev": "rm -rf ./dist && tsc && vite build --watch",
+    "build": "tsc && vite build",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview",
+    "storybook": "storybook dev -p 6006",
+    "build:storybook": "storybook build"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest",
+      "plugin:storybook/recommended"
+    ]
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "build-storybook": {
+    "builder": "@storybook/react/standalone",
+    "options": {
+      "outputDir": "lib/storybook",
+      "configDir": ".storybook"
+    }
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@storybook/addon-essentials": "^7.6.10",
+    "@storybook/addon-interactions": "^7.6.10",
+    "@storybook/addon-links": "^7.6.10",
+    "@storybook/addon-onboarding": "^1.0.10",
+    "@storybook/addon-themes": "^7.6.10",
+    "@storybook/blocks": "^7.6.10",
+    "@storybook/react": "^7.6.10",
+    "@storybook/react-vite": "^7.6.10",
+    "@storybook/test": "^7.6.10",
+    "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "@types/jest": "^27.5.2",
+    "@types/node": "^16.18.73",
+    "@types/react": "^18.2.48",
+    "@types/react-dom": "^18.2.18",
+    "@vitejs/plugin-react": "^4.2.1",
+    "autoprefixer": "^10.4.17",
+    "eslint-plugin-storybook": "^0.6.15",
+    "postcss": "^8.4.33",
+    "prop-types": "^15.8.1",
+    "storybook": "^7.6.10",
+    "tailwindcss": "^3.4.1",
+    "ts-node": "^10.9.2",
+    "typescript": "latest",
+    "vite": "^5.0.12",
+    "vite-plugin-dts": "^3.7.1"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "directories": {
+    "lib": "lib"
+  }
+}
