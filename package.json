@@ -24,10 +24,9 @@
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "dev:lib": "rm -rf ./dist && tsc && vite build --watch",
-    "dev:storybook": "storybook dev -p 6006",
+    "storybook": "start-storybook -s public",
     "build:lib": "tsc && vite build",
-    "build:storybook": "storybook build -o dist/storybook",
-    "serve": "rm -rf ./dist && tsc && vite build && storybook build -o dist/storybook && storybook serve dist/storybook"
+    "build:storybook": "storybook build -o dist/storybook"
   },
   "eslintConfig": {
     "extends": [
