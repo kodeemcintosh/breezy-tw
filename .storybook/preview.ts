@@ -1,6 +1,7 @@
 import type { Preview } from "@storybook/react";
 import { withThemeByClassName } from '@storybook/addon-themes';
 import '../lib/tailwind.css';
+import '../lib/index.css';
 
 export const decorators = [
   withThemeByClassName({

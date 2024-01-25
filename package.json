@@ -16,15 +16,15 @@
       "require": "./dist/breezy-tw.umd.js",
       "types": "./dist/main.d.ts"
     },
-    "./lib/style.css": "./dist/style.css"
+    "./dist/tailwind.css": "./dist/tailwind.css"
   },
   "scripts": {
     "dev": "concurrently \"rm -rf ./dist && tsc && vite build --watch\" \"storybook dev -p 6006\"",
-    "build": "tsc && vite build && storybook build -o dist/storybook",
+    "build": "rm -rf ./dist && tsc && vite build && storybook build -o dist/storybook",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "dev:lib": "rm -rf ./dist && tsc && vite build --watch",
-    "storybook": "start-storybook -s public",
+    "dev:storybook": "storybook dev -p 6006",
     "build:lib": "tsc && vite build",
     "build:storybook": "storybook build -o dist/storybook"
   },
@@ -59,9 +59,11 @@
   },
   "dependencies": {
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-icons": "^5.0.1"
   },
   "devDependencies": {
+    "@storybook/addon-a11y": "^7.6.10",
     "@storybook/addon-essentials": "^7.6.10",
     "@storybook/addon-interactions": "^7.6.10",
     "@storybook/addon-links": "^7.6.10",

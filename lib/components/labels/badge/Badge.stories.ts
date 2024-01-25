@@ -5,7 +5,7 @@ import { StoryObj, Meta } from "@storybook/react";
 import { Badge, BadgeProps } from "./Badge";
 
 export default {
-  title: "Components/Badge",
+  title: "Labels/Badge",
   component: Badge,
   // tags: ['autodocs'],
   argTypes: {
