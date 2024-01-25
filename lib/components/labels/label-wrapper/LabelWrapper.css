@@ -1,0 +1,4 @@
+
+#label-wrapper {
+  @apply inline-flex items-center rounded-md px-2 py-1 sm:text-2xs lg:text-xs font-medium ring-1 ring-inset;
+}

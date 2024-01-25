@@ -4,11 +4,11 @@ export default {
   content: [
     './lib/components/**/*.{js,ts,jsx,tsx,mdx}',
   ],
-  // safelist: [
-  //   {
-  //     pattern: /^(.*?)/,
-  //   },
-  // ],
+  safelist: [
+    {
+      pattern: /^(.*?)/,
+    },
+  ],
   darkMode: ['class', '[data-mode="dark"]'],
   theme: {
     extend: {

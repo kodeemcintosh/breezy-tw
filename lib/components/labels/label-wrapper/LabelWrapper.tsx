@@ -1,16 +1,17 @@
 
 import { PropsWithChildren } from "react";
+import './LabelWrapper.css';
 
-export interface BadgeProps extends PropsWithChildren {
+export interface LabelWrapperProps extends PropsWithChildren {
   text?: string;
   className?: string;
   color?: "gray" | "red" | "yellow" | "green" | "blue" | "purple" | "pink";
 }
-export const Badge = ({ children, text, className, color }: BadgeProps) => {
+export const LabelWrapper = ({ children, text, className, color }: LabelWrapperProps) => {
   const styles = !!className && !color ? className : `bg-${color}-50 text-pastel-${color} ring-${color}-600`
   console.log({ styles })
   return (
-    <span className={`${styles} inline-flex items-center rounded-md px-2 py-1 sm:text-2xs lg:text-xs font-medium ring-1 ring-inset`}>
+    <span id="badge" className={styles}>
       {text}
       {children}
     </span>
