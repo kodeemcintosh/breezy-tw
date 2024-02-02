@@ -1,4 +1,4 @@
-// SelectorWrapper.stories.tsx
+// Selector.stories.tsx
 import React from "react";
 import { StoryObj, Meta } from "@storybook/react";
 
