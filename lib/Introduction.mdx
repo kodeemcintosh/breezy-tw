@@ -5,7 +5,8 @@ import * as ButtonStories from './components/button/Button.stories';
 import * as CardStories from './components/card/Card.stories';
 import * as LabelStories from './components/label/Label.stories';
 import * as InputStories from './components/input/Input.stories';
-import * as SelectorStories from './components/selector/Selector.stories';
+import * as LinkMenuStories from './components/selector/LinkMenu.stories';
+import * as ModalStories from './components/modal/Modal.stories';
 
 <Meta title="Components/Introduction" />
 
@@ -59,6 +60,17 @@ import * as SelectorStories from './components/selector/Selector.stories';
 </Canvas> */}
 
 
-<Title>Selector</Title>
-<Subheading>Selectors are used to select an option from a list.</Subheading>
-<Canvas of={SelectorStories.Base} />
+<Title>LinkMenu</Title>
+<Subheading>LinkMenus are used to select a page option from a list.</Subheading>
+<Canvas layout='centered'>
+  <section className='flex flex-row h-80 w-fit items-center gap-x-60'>
+    <Story of={LinkMenuStories.Base} />
+    <Story of={LinkMenuStories.MenuWithIcons} />
+  </section>
+</Canvas>
+
+{/* <Title>Modal</Title>
+<Subheading>Modals are used to display a message or collect information from the user.</Subheading>
+<Canvas of={ModalStories.Base} />
+<Canvas of={ModalStories.ModalWithTitle} />
+<Canvas of={ModalStories.ModalWithTitleAndChildren} /> */}
