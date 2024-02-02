@@ -36,7 +36,7 @@ export const Disabled: Story = {
 
 export const Icon: Story = {
   args: {
-    className: "p-0.5 hover:bg-neutral-100",
+    className: "p-0.5",
     children: [React.createElement(HiEmojiHappy, { key: "icon", className: "size-8" })],
     onClick: () => alert("Icon Button Clicked!")
   }
