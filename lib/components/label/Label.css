@@ -1,0 +1,12 @@
+
+#label {
+  @apply text-black;
+  /* @apply inline-flex items-center rounded-md px-2 py-1 sm:text-2xs lg:text-xs font-medium ring-1 ring-inset; */
+}
+
+.label-wrapper-row {
+  @apply flex flex-row align-top gap-x-2 text-xs;
+}
+.label-wrapper-column {
+  @apply flex flex-col items-start gap-y-2 text-xs;
+}

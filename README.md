@@ -1,8 +1,20 @@
 # Breezy Tailwind
 
-## A React UI library written with tailwindcss (includes Tailwind UI components) that can easily be extended inline with tailwindcss
+## An inline-extendable React component library based on TailwindUI w/ HeadlessUI and TailwindCSS
+
+### Tech
+#### React
+#### Vite
+#### Storybook
+#### Viem/Wagmi
 
 
-### Why?
-#### Because I got tired of using the stuff that the Tailwind website has and wanted to easily centralize and import those components for personal projects
+Project Installation
+```
+npm install breezy-tw
+```
 
+Run Library
+```
+npm run dev
+```

@@ -2,6 +2,7 @@ import { mergeConfig } from 'vite';
 
 export default {
   stories: [
+    "../lib/**/*.mdx",
     "../lib/components/**/*.stories.@(js|jsx|mjs|ts|tsx)"
   ],
   // stories: ["../src/**/*.mdx", "../src/components/**/*.stories.@(js|jsx|mjs|ts|tsx)"],
@@ -27,6 +28,7 @@ export default {
   },
   docs: {
     autodocs: "tag",
+    defaultName: "Docs",
   },
   staticDirs: ["../public"],
   features: {

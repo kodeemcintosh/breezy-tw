@@ -6,8 +6,9 @@ import { Input, InputProps } from "./Input";
 import './Input.css';
 
 export default {
-  title: "Input",
+  title: "Components/Input",
   component: Input,
+  tags: ['autodocs'],
   argTypes: {
     placeholder: { control: 'text' },
     className: { control: 'text' },
@@ -16,7 +17,7 @@ export default {
 
 type Story = StoryObj<typeof Input>;
 
-export const Default: Story = {
+export const Base: Story = {
   args: {
     placeholder: "Placeholder",
     className: "",

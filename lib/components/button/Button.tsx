@@ -3,13 +3,18 @@ import { PropsWithChildren } from "react";
 import './Button.css';
 
 export interface ButtonProps extends PropsWithChildren {
+  onClick: any;
   text?: string;
   className?: string;
-  color?: "gray" | "red" | "yellow" | "green" | "blue" | "purple" | "pink";
+  disabled?: boolean;
 }
-export const Button = ({ children, text, className, color }: ButtonProps) => (
-  <span id="badge" className={!!className && !color ? className : `bg-${color}-100 text-pastel-${color} ring-${color}-600`}>
+export const Button = ({ children, text, className, onClick, disabled = false }: ButtonProps) => (
+  <button
+    onClick={onClick}
+    className={`flex flex-row gap-x-2 ${className}`}
+    disabled={disabled}
+    >
     {text}
     {children}
-  </span>
+  </button>
 );

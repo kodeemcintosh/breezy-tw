@@ -6,6 +6,7 @@ import { Button, ButtonProps } from "./Button";
 describe("Button Component", () => {
   const renderButton = (props: Partial<ButtonProps> = {}) => {
     const defaultProps: ButtonProps = {
+      onClick: jest.fn(),
       text: "Test Button",
       ...props,
     };
@@ -23,16 +24,9 @@ describe("Button Component", () => {
     expect(screen.getByText("Test Button")).toHaveClass("custom-class");
   });
 
-  it("applies color classes correctly", () => {
-    const colors: ButtonProps["color"][] = ["gray", "red", "yellow", "green", "blue", "purple", "pink"];
-    colors.forEach(color => {
-      renderButton({ color });
-      expect(screen.getByText("Test Button")).toHaveClass(`bg-badge-${color} text-badge-${color}/10 ring-badge-${color}/80`);
-    });
-  });
 
   it("renders children when provided", () => {
-    render(<Button>Child Element</Button>);
+    render(<Button onClick={() => jest.fn()}>Child Element</Button>);
     expect(screen.getByText("Child Element")).toBeInTheDocument();
   });
 });
