@@ -8,7 +8,7 @@ export interface InputProps extends PropsWithChildren {
   className?: string;
   clearable?: boolean;
 }
-export const Input = ({ children = [], className, placeholder, clearable = false }: InputProps) => {
+export const Input = ({ className, placeholder, clearable = false }: InputProps) => {
   const [input, setInput] = useState<string>("")
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => setInput(e.target.value);
   const handleClear = () => setInput("");
