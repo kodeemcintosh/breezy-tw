@@ -1,0 +1,4 @@
+
+#card {
+  @apply flex flex-col rounded-md bg-neutral-50 border-neutral-300 border-2;
+}

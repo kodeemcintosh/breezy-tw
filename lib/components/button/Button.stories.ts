@@ -28,7 +28,7 @@ export const Base: Story = {
 export const Disabled: Story = {
   args: {
     text: "Disabled",
-    className: "",
+    className: "bg-neutral-100 hover:bg-neutral-100",
     onClick: () => {},
     disabled: true
   }
@@ -36,8 +36,8 @@ export const Disabled: Story = {
 
 export const Icon: Story = {
   args: {
-    className: "p-1 bg-purple-200 hover:bg-purple-300",
-    children: [React.createElement(HiEmojiHappy, { key: "icon", className: "size-6" })],
+    className: "p-0.5 hover:bg-neutral-100",
+    children: [React.createElement(HiEmojiHappy, { key: "icon", className: "size-8" })],
     onClick: () => alert("Icon Button Clicked!")
   }
 }

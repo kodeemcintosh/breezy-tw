@@ -2,22 +2,13 @@ import { Canvas, Meta, Story, Title, Subheading} from '@storybook/blocks';
 
 import * as BadgeStories from './components/badge/Badge.stories';
 import * as ButtonStories from './components/button/Button.stories';
+import * as CardStories from './components/card/Card.stories';
 import * as LabelStories from './components/label/Label.stories';
 import * as InputStories from './components/input/Input.stories';
 import * as SelectorStories from './components/selector/Selector.stories';
 
 <Meta title="Components/Introduction" />
 
-<Title>Label</Title>
-<Subheading>Labels can be uses on their own or positioned around a child component.</Subheading>
-{/* <Canvas layout='centered'>
-  <section className='flex flex-row gap-x-20'> */}
-
-<Canvas of={LabelStories.Base} />
-<Canvas of={LabelStories.WrapperHorizontal} />
-<Canvas of={LabelStories.WrapperVertical} />
-  {/* </section>
-</Canvas> */}
 
 <Title>Badge</Title>
 <Subheading>Badges are used to display a small amount of information.</Subheading>
@@ -31,20 +22,42 @@ import * as SelectorStories from './components/selector/Selector.stories';
   <Story of={BadgeStories.Green} />
 </Canvas>
 
+
 <Title>Button</Title>
 <Subheading>Buttons are used to trigger an action or event.</Subheading>
 <Canvas layout='centered'>
   <section className='flex flex-row h-10 w-fit items-center gap-x-20'>
-  <Story of={ButtonStories.Base} />
-  <Story of={ButtonStories.Icon} />
-  <Story of={ButtonStories.TextAndIcon} />
-  <Story of={ButtonStories.Disabled} />
+    <Story of={ButtonStories.Base} />
+    <Story of={ButtonStories.Icon} />
+    <Story of={ButtonStories.TextAndIcon} />
+    <Story of={ButtonStories.Disabled} />
   </section>
 </Canvas>
+
+
+<Title>Card</Title>
+<Subheading>Cards are used to display a collection of information.</Subheading>
+<Canvas of={CardStories.Base} />
+<Canvas of={CardStories.CardWithTitle} />
+<Canvas of={CardStories.CardWithTitleAndChildren} />
+
 
 <Title>Input</Title>
 <Subheading>Inputs are used to collect data from the user.</Subheading>
 <Canvas of={InputStories.Base} />
+
+
+<Title>Label</Title>
+<Subheading>Labels can be uses on their own or positioned around a child component.</Subheading>
+{/* <Canvas layout='centered'>
+  <section className='flex flex-row gap-x-20'> */}
+
+<Canvas of={LabelStories.Base} />
+<Canvas of={LabelStories.WrapperHorizontal} />
+<Canvas of={LabelStories.WrapperVertical} />
+  {/* </section>
+</Canvas> */}
+
 
 <Title>Selector</Title>
 <Subheading>Selectors are used to select an option from a list.</Subheading>
