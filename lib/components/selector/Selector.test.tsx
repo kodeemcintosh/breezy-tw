@@ -6,7 +6,6 @@ import { Selector, SelectorProps } from "./Selector";
 describe("Selector Component", () => {
   const renderSelector = (props: Partial<SelectorProps> = {}) => {
     const defaultProps: SelectorProps = {
-      text: "Test Selector",
       ...props,
     };
     return render(<Selector {...defaultProps} />);
